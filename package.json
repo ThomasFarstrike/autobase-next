@@ -1,0 +1,55 @@
+{
+  "name": "@holepunchto/autobase",
+  "version": "5.2.22",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && brittle test/*.js",
+    "fuzz:generated": "brittle test/reference/fuzz/generated/*.js",
+    "fuzz:main": "node test/fuzz/index.js",
+    "fuzz": "node test/reference/fuzz/fuzz.js"
+  },
+  "files": [
+    "index.js",
+    "lib/**"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/autobase-next.git"
+  },
+  "author": "Holepunch",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/holepunchto/autobase-next/issues"
+  },
+  "homepage": "https://github.com/holepunchto/autobase-next#readme",
+  "dependencies": {
+    "b4a": "^1.6.1",
+    "debounceify": "^1.0.0",
+    "hyperbee": "^2.4.2",
+    "hypercore": "^10.29.2",
+    "hypercore-crypto": "^3.4.0",
+    "hypercore-id-encoding": "^1.2.0",
+    "nanoassert": "^2.0.0",
+    "ready-resource": "^1.0.0",
+    "safety-catch": "^1.0.2",
+    "sub-encoder": "^2.1.1",
+    "tiny-buffer-map": "^1.1.1"
+  },
+  "devDependencies": {
+    "autobase-test-helpers": "^2.0.1",
+    "brittle": "^3.1.1",
+    "corestore": "^6.15.3",
+    "random-access-memory": "^6.2.0",
+    "same-data": "^1.0.0",
+    "standard": "^17.0.0",
+    "test-tmp": "^1.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "**/test/fuzz/generated/**",
+      "**/test/reference/**",
+      "example.mjs"
+    ]
+  }
+}
